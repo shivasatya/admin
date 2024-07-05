@@ -1,0 +1,93 @@
+server:
+ port: 8080
+
+
+spring:
+ application:
+    name: API-GATEWAY
+    
+ cloud:
+    gateway:
+      httpclient:
+        connect-timeout: 36000000
+        response-timeout: 36000000
+        wiretap: true
+      httpserver:
+        wiretap: true 
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowCredentials: false
+            allowedHeaders:
+              - content-type
+              - Origin  
+              - Accept
+              - Authorization
+              - X-LID
+              - Content-Security-Policy
+              - X-Frame-Options
+              - X-XSS-Protection
+              - Strict-Transport-Security
+            allowedMethods:
+              - GET
+              - POST
+              - OPTIONS
+              - DELETE
+              - PUT
+    
+      routes:
+         
+      - id: USER
+        uri: ${USER_URL:http://localhost:8089}
+        predicates:
+         - Path=/user/**
+        filters:
+         - AuthenticationFilter
+         
+      - id: USER
+        uri: ${USER_URL:http://localhost:8089}
+        predicates:
+         - Path=/vendor/**
+        filters:
+         - AuthenticationFilter
+         
+         
+      - id: ADMIN-SERVICE
+        uri: ${ADMIN_URL:http://localhost:8085}
+        predicates:
+         - Path=/admin/**
+        filters:
+         - AuthenticationFilter 
+         
+      - id: SECURITY-SERVICE
+        uri: ${SECURITY_URL:http://localhost:8079}
+        predicates:
+         - Path=/auth/**
+        filters:
+         - AuthenticationFilter  
+         
+         
+      - id: Admin-Management
+        uri: ${ADMIN_URL:http://localhost:8085}
+        predicates:
+         - Path=/admin/**
+        filters:
+         - AuthenticationFilter  
+        
+     
+         
+         
+    
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+   register-with-eureka: true
+   fetch-registry: true
+   service-url: 
+    defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
+    
+    
+      

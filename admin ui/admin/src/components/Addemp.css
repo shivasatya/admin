@@ -1,0 +1,48 @@
+
+
+.Addemployee_container {
+  display: flex;
+  flex-wrap: wrap;
+ 
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+  width: 80%;
+  border-radius: 20px;
+  background-color: rgb(30, 187, 187);
+  padding-bottom: 90px;
+    }
+   
+     .form  {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      display: flex;
+      padding: 20px;
+      }
+
+
+     
+       .input  select{
+        text-align: center;
+        border-radius: 10px;
+        font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+       height: 100%;
+        
+      align-content: center;
+     padding-top: 10px;
+    
+        }
+
+      .form .input {
+      display: flex;
+      flex-wrap: wrap;
+      width: 30%;
+    
+    align-content: center;
+   padding-top: 80px;
+   padding-right: 35px;
+      }

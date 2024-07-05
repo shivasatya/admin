@@ -1,0 +1,31 @@
+.Admin_container{
+display: flex;
+height: 280px;
+background-image: url('https://t4.ftcdn.net/jpg/01/05/72/61/360_F_105726195_r0MpL0Noxp2NeMh3RsRwCskbeL7ensjV.jpg');
+      background-size: cover; /* Adjusts the background image to cover the entire element */
+      background-repeat: no-repeat; /* Prevents the background image from repeating */
+      background-position: center; /* Centers the background image */
+    
+}
+.div_admin{
+    
+    display: flex;
+    flex-direction: column;
+margin: auto;
+margin-top: 100px;
+
+border-color: rgb(36, 194, 19);
+border: 2px solid;
+    background-color: transparent;
+    width: 78%;
+    border-radius: 10px;
+}
+h1{
+    color: gray;
+}
+h2{
+    color: rgb(48, 15, 209);
+}
+p{
+    line-height: 2.6;
+}

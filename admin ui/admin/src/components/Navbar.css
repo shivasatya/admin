@@ -1,0 +1,45 @@
+
+.container_nav{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aqua;
+   
+}
+ .navbar{
+    display: flex;
+    
+
+    width: 77%;
+    justify-content: end;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: end;
+}
+.navbar ul  a{
+  
+    display: flex;
+    flex-wrap: wrap;
+    text-align: end;
+    text-decoration: none;
+   
+}
+.navbar ul  a button{
+ text-align: center;
+ background-color:burlywood;
+ border-radius: 10px;
+ border: none;
+ cursor: pointer;
+ 
+}
+
+.btn_logout{
+  background-color: rgb(81, 19, 204);
+  color: black;
+  cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}

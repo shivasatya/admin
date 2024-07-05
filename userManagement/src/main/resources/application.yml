@@ -1,0 +1,43 @@
+server:
+  port: 8089
+  
+spring:
+ application:
+  name: USER
+  
+ mail:
+    host: smtp.gmail.com
+    port: 587
+    username: madala.siva241@gmail.com
+    password: ncrr rbts uuzk jdgp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
+
+  
+ datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user
+    username: root
+    password: root
+ jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    
+eureka:
+ instance:
+  prefer-ip-address: true
+ client:
+  register-with-eureka: true
+  fetch-registry: true
+  service-url:
+   defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
+  custom-security:
+   auth-server-url: http://your-auth-server-url
+
+   
+    
+   

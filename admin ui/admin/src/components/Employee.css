@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+  }
+  
+  .add-button button{
+    cursor: pointer;
+    background-color: rgb(60, 12, 206);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    color: white;
+ margin: 10px;
+  }
+  .update {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #10e233;
+    color: #e3ece5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }
+  .delete {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #fb4204;
+    color: #e3ece5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }
+ .sendMessageToVendor{
+  cursor: pointer;
+ }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+  }
+  
+  th, td {
+    padding-left: 100px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  td input {
+    outline: none;
+    border: none;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #10e233;
+    width: 150px;
+    height: 30px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #ddd;
+  }
+  
